@@ -14,3 +14,10 @@ describe ('Room#attr_readers') do
     expect(my_room.accessible_rooms).to(eq({'A2' => 'E', 'B1' => 'N'}))
   end
 end
+
+describe ('Maze#attr_path') do
+  it ('will create a new Maze and access the path using the path accessor') do
+  my_maze = Maze.new
+  expect(my_maze.path[1].accessible_rooms).to(eq({'A2' => 'E', 'B1' => 'N'}))
+  end
+end
