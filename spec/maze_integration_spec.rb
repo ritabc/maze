@@ -3,16 +3,10 @@ require('./app')
 Capybara.app = Sinatra::Application
 set(:show_exceptions, false)
 
-# describe('play the maze path', {:type => :feature}) do
-#   it('starts the game') do
-#     visit('/')
-#     click_button('Proceed')
-#     expect(page).to have_content('Room 1')
-#   end
-#   it('tests the back button') do
-#     visit('/')
-#     click_button("Proceed")
-#     click_button("Right")
-#     expect(page).to have_content('Youve reached')
-#   end
-# end
+describe('from the / page', {:type => :feature}) do
+  it('user can click Proceed and be taken to the /room/o0 page') do
+    visit('/')
+    click_button('Proceed')
+    expect(page).to have_content('Room 1')
+  end
+end

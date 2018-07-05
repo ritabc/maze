@@ -1,0 +1,9 @@
+<h2>Welcome to the next room</h2>
+<!-- ## for each item p_r in @path
+### for each (key? value? k/v?) accessible room a_r in p_r
+#### make a new button with <button type="button" class="btn btn-primary" name='key-room'>'value-direction'</button> -->
+
+
+<%@path_room.accessible_rooms.each do |accessible_room, direction| %>
+  <button type="button" name="<%=accessible_room%>" class="btn btn-primary"><%=direction%></button>
+<%end%>

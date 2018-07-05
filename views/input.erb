@@ -1,4 +1,4 @@
-<h1>Would you like to proceed throught the maze?<h1>
-<form action="/room1">
-<button name="proceed" type="submit">Proceed</button>
+<h1>Would you like to proceed through the maze?<h1>
+<form action="/room/<%=@game_path[1].pos%>" method="post">
+  <button name="proceed" type="submit">Proceed</button>
 </form>
