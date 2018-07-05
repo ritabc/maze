@@ -24,15 +24,12 @@ A maze application
 - orientations are N,E,S,W
 -
  * Class: Room
- * Class variable: Current Room
- * (class/instance?) methods: Update current room
+ * Class variable of Maze: Current Room
+ * (class) method of Room: Update @@current_room to self
 - On the layout.erb page, loop through room's property (accessible_rooms) to create buttons for each room which can be accessed from there.
-* Another Class: Path? Maze?
- - Say, Path class:
-    *
-- Say, Maze class:
-    * Initialize it with an instance variable: the correct path as an array
-    * Each room's info (for ie, rooms accessible from there) would be initialized with the Maze class (ie, new rooms instantiated upon Maze initialization)
+* Another Class: Maze
+  * Initialize it with an instance variable: the correct path as an array
+  * Each room's info (for ie, rooms accessible from there) would be initialized with the Maze class (ie, new rooms instantiated upon Maze initialization)
 * Store the rooms accessible from each room as a hash {'B1' => 'N', 'A2' = E, }    
 
 ## License
