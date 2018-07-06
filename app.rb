@@ -10,6 +10,13 @@ get('/') do
   erb(:input)
 end
 
+post('/') do
+  game = Maze.new
+  @path_number = 0
+  @game_path = game.path
+  erb(:room)
+end
+
 post('/room/:pos') do
   game = Maze.new
   @path = game.path
